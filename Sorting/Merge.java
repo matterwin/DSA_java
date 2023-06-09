@@ -37,3 +37,13 @@ public class Merge{
         }
     }
 }
+
+/* Logic:
+ * divide each array in half -> O(logn)
+ * iterate/combine each elem in splitted arrays (l & r) and put them back into a -> O(n)
+ * 
+ * Time complexity:
+ * Worst: O(nlogn)
+ * Avg: O(nlogn)
+ * Best: O(nlogn)
+ */
