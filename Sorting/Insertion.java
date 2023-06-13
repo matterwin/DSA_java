@@ -28,5 +28,17 @@ public class Insertion {
                 System.out.print(a[i] + " ");
             }
         }
-    
 }
+
+/* Logic:
+ * start at the 2nd elem
+ * for each iteration j is the index left to current elem in iteration
+ * if the elem left of current is > than the current, then copy the current index and its value in array to = to the left elem (or a[j] in this case)
+ *      then decrement j so you can compare the next element with the value stored in current
+ * after that or if it's false where the current elem is in its corrent position, you put the current index to equal to the j+1 (curr pos) to = to the value stored in the current originally
+ * 
+ * Time complexity:
+ * Worst: O(n^2)
+ * Avg: O(n^2)
+ * Best: O(n)
+ */
