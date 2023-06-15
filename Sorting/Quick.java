@@ -57,4 +57,7 @@ public class Quick {
  * Worst: O(n^2)
  * Avg: O(nlogn)
  * Best: O(nlogn)
+ * 
+ * Space complexity:
+ * O(logn)
  */

@@ -41,4 +41,7 @@ public class Insertion {
  * Worst: O(n^2)
  * Avg: O(n^2)
  * Best: O(n)
+ * 
+ * Space complexity:
+ * O(1)
  */

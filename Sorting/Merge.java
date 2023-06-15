@@ -46,4 +46,7 @@ public class Merge{
  * Worst: O(nlogn)
  * Avg: O(nlogn)
  * Best: O(nlogn)
+ * 
+ * Space complexity:
+ * Depends, but O(n)
  */
