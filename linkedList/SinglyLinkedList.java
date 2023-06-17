@@ -22,6 +22,27 @@ public class SinglyLinkedList{
         }
     }
 
+    public void removeNodeWithDataD(int d){
+        if(length == 0){
+            System.out.println("List is empty");
+            return;
+        }
+        if(head.data == d){
+            head = head.next;
+            return;
+        }
+
+        Node curr = head;
+        while(curr.next != null){
+            if(curr.next.data == d){
+                curr.next = curr.next.next;
+                System.out.println("Removing node with data: " + d);
+                return;
+            }
+            curr = curr.next;
+        }
+    }
+
     public void display(){
         if (head == null)
             System.out.print("No nodes in the list");
