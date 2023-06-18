@@ -23,6 +23,31 @@ public class SinglyLinkedList{
         length++;
     }
 
+    public void insert(int pos, int d){
+        if(pos > length + 2 || pos <= 0){
+            System.out.println("Out of bounds, good job chump");
+            return;
+        }
+        Node newNode = new Node(d);
+        if(pos == 1){
+            newNode.next = head;
+            head = newNode;
+            length++;
+            System.out.println("Adding node with data: " + d + " at pos: " + pos);
+            return;
+        }
+        Node curr = head;
+        int i = 1;
+        while(curr.next != null && (i != pos-1)){
+            curr = curr.next;
+        }
+        Node temp = curr.next;
+        curr.next = newNode;
+        newNode.next = temp;
+        System.out.println("Adding node with data: " + d + " at pos: " + pos);
+        length++;
+    }
+
     public void removeNodeWithDataD(int d){
         if(length == 0){
             System.out.println("List is empty");
@@ -104,6 +129,8 @@ public class SinglyLinkedList{
         l.removeNodeWithDataD(3);
         l.display();
         l.removeNodeAtPosition(3);
+        l.display();
+        l.insert(1, 10);
         l.display();
     }
 }
