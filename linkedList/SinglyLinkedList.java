@@ -20,6 +20,7 @@ public class SinglyLinkedList{
             }
             curr.next = newNode;
         }
+        length++;
     }
 
     public void removeNodeWithDataD(int d){
@@ -29,6 +30,7 @@ public class SinglyLinkedList{
         }
         if(head.data == d){
             head = head.next;
+            length--;
             return;
         }
 
@@ -37,9 +39,45 @@ public class SinglyLinkedList{
             if(curr.next.data == d){
                 curr.next = curr.next.next;
                 System.out.println("Removing node with data: " + d);
+                length--;
                 return;
             }
             curr = curr.next;
+        }
+    }
+
+    public void removeNodeAtPosition(int pos){
+        if(pos > length || pos <= 0){
+            System.out.println("Invalid position");
+            return;
+        }
+        else{
+            if(pos == 1){
+                head = head.next;
+                length--;
+                System.out.println("Removing node at position: " + pos);
+                return;
+            }
+            else{
+                Node curr = head;
+                int i = 1;
+                while(curr.next != null){
+                    if(i == pos){
+                        curr.next = curr.next.next;
+                        System.out.println("Removing node at position: " + pos);
+                        length--;
+                        return;
+                    }
+                    else if(i == pos-1){
+                        curr.next = null;
+                        System.out.println("Removing node at position: " + pos);
+                        length--;
+                        return;
+                    }
+                    curr = curr.next;
+                    i++;
+                }    
+            }
         }
     }
 
@@ -53,7 +91,7 @@ public class SinglyLinkedList{
                 curr = curr.next;
             }
         }
-        
+        System.out.println("");
     }
 
     public static void main(String[] args){
@@ -62,6 +100,10 @@ public class SinglyLinkedList{
         l.append(2);
         l.append(3);
         l.append(4);
+        l.display();
+        l.removeNodeWithDataD(3);
+        l.display();
+        l.removeNodeAtPosition(3);
         l.display();
     }
 }
