@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class DoublyLinkedList {
+public class Doubly{
     Node head;
     int length;
 
@@ -16,7 +16,7 @@ public class DoublyLinkedList {
         }
     }
 
-    public DoublyLinkedList(){
+    public Doubly(){
         this.length = 0;
         this.head = null;
     }
@@ -35,7 +35,7 @@ public class DoublyLinkedList {
     }
 
     public static void main(String[] args){
-        DoublyLinkedList d = new DoublyLinkedList();
+        Doubly d = new Doubly();
         d.display();
 
     } 

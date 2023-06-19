@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class SinglyLinkedList{
+public class Singly{
 
     private Node head;
     private int length;
@@ -15,7 +15,7 @@ public class SinglyLinkedList{
         }
     }
     
-    public SinglyLinkedList(){
+    public Singly(){
         this.head = null;
         this.length = 0;
     }
@@ -172,7 +172,7 @@ public class SinglyLinkedList{
     }
 
     public static void main(String[] args){
-        SinglyLinkedList l = new SinglyLinkedList();
+        Singly l = new Singly();
         l.append(1);
         l.append(2);
         l.append(3);
