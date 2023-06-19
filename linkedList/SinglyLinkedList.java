@@ -1,9 +1,19 @@
-package linkedList;
+package LinkedList;
 
 public class SinglyLinkedList{
 
     private Node head;
     private int length;
+    
+    public class Node {
+        public int data;
+        public Node next;
+
+        public Node(int d){
+            this.data = d;
+            this.next = null;
+        }
+    }
     
     public SinglyLinkedList(){
         this.head = null;
@@ -106,6 +116,48 @@ public class SinglyLinkedList{
         }
     }
 
+    public void getFirst(){
+        if(head == null)
+            System.out.println("List is empty");
+        else
+            System.out.println(head.data);
+    }
+
+    public void getLast(){
+        if(head == null)
+            System.out.println("List is empty");
+        else{
+            Node curr = head;
+            while(curr.next  != null)
+                curr = curr.next;
+            System.out.println(curr.data);
+        }
+    }
+
+    public boolean contains(int value){
+        Node curr = head;
+        while(curr != null){
+            if(curr.data == value)
+                return true;
+            curr = curr.next;
+        }
+        return false;
+    }
+
+    public void reverse(){
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public void display(){
         if (head == null)
             System.out.print("No nodes in the list");
@@ -131,6 +183,11 @@ public class SinglyLinkedList{
         l.removeNodeAtPosition(3);
         l.display();
         l.insert(1, 10);
+        l.display();
+        System.out.println(l.contains(2));
+        l.getLast();
+        l.getFirst();
+        l.reverse();
         l.display();
     }
 }
