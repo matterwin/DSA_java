@@ -24,15 +24,50 @@ public class Binary {
     }
 
     //std bst insertion
-    private Node insertNode(Node currentNode, int d) {
-        if (currentNode == null) return new Node(d);
+    private Node insertNode(Node curr, int d) {
+        if (curr == null) return new Node(d);
 
-        if (d < currentNode.data)
-            currentNode.left = insertNode(currentNode.left, d);
-        else if (d > currentNode.data)
-            currentNode.right = insertNode(currentNode.right, d);
+        if (d < curr.data)
+            curr.left = insertNode(curr.left, d);
+        else if (d > curr.data)
+            curr.right = insertNode(curr.right, d);
 
-        return currentNode;
+        return curr;
+    }
+
+    private Node findMin(Node curr) {
+        while (curr.left != null)
+            curr = curr.left;
+
+        return curr;
+    }   
+
+    public Node removeNode(Node curr, int d) {
+        if (curr == null) return null;
+
+        if (d < curr.data)
+            curr.left = removeNode(curr.left, d);
+        else if (d > curr.data)
+            curr.right = removeNode(curr.right, d);
+        else {
+            // Node to be removed is found
+
+            // Case 1: No child or 1 child
+            if (curr.left == null)
+                return curr.right;
+            else if (curr.right == null)
+                return curr.left;
+
+            // Case 2: 2 children
+            // Find the inorder successor (or predecessor)
+            Node successor = findMin(curr.right);
+            curr.data = successor.data;
+
+            // Remove the inorder successor
+            curr.right = removeNode(curr.right, successor.data);
+        }
+
+        return curr;
     }
 
     public void preorder(Node curr){
@@ -70,5 +105,8 @@ public class Binary {
         bt.inorder(bt.root);
         System.out.println("--------------------");
         bt.postorder(bt.root);
+        bt.removeNode(bt.root, 9);
+        System.out.println("--------------------");
+        bt.inorder(bt.root);
     }
 }
