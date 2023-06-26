@@ -1,14 +1,13 @@
-package DS;
+package Sort;
 
 import java.util.Arrays;
 
-// Min-Heap
-public class Heap {
+public class Heapsort {
     int[] heap;
     int size;
     int capacity;
 
-    public Heap(int c){
+    public Heapsort(int c){
         this.capacity = c;
         this.size = 0;
         this.heap = new int[capacity];
@@ -111,42 +110,37 @@ public class Heap {
         for (int i = getParent(size - 1); i >= 0; i--) {
             floatDown(i);
         }
-}
+    }
+
+    public static void heapsort(int[] array) {
+        int n = array.length;
+
+        // Create a new heap and heapify the input array
+        Heapsort heap = new Heapsort(n);
+        heap.heapify(array);
+
+        // Extract elements from the heap in sorted order
+        for (int i = n - 1; i >= 0; i--) {
+            array[i] = heap.extractMin();
+        }
+
+        // Reverse the sorted array to obtain ascending order
+        for (int i = 0; i < n / 2; i++) {
+            int temp = array[i];
+            array[i] = array[n - i - 1];
+            array[n - i - 1] = temp;
+        }
+    }
 
     public static void main(String[] args){
-        Heap heap = new Heap(5);
-        heap.insert(3);
-        heap.insert(2);
-        heap.insert(0);
-        heap.insert(1);
-        heap.insert(64);
-
-        System.out.println("Heap contents:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.print(heap.heap[i] + " ");
-        }
-        System.out.println();
-
-        System.out.println("Extracted min value: " + heap.extractMin());
-        System.out.println("Extracted min value: " + heap.extractMin());
-        System.out.println("Extracted min value: " + heap.extractMin());
-        System.out.println("Extracted min value: " + heap.extractMin());
-        System.out.println("Extracted min value: " + heap.extractMin());
-
-        Heap heapifiedHeap = new Heap(5);
         int[] a = {3, 2, 0, 1, 64};
-        heapifiedHeap.heapify(a);
-        System.out.println("Heapified contents:");
-        for (int i = 0; i < heapifiedHeap.size; i++) {
-            System.out.print(heapifiedHeap.heap[i] + " ");
+        heapsort(a);
+
+        System.out.println("Sorted array:");
+        for (int num : a) {
+            System.out.print(num + " ");
         }
         System.out.println();
-
-        System.out.println("Extracted min value: " + heapifiedHeap.extractMin());
-        System.out.println("Extracted min value: " + heapifiedHeap.extractMin());
-        System.out.println("Extracted min value: " + heapifiedHeap.extractMin());
-        System.out.println("Extracted min value: " + heapifiedHeap.extractMin());
-        System.out.println("Extracted min value: " + heapifiedHeap.extractMin());
     }
 }
 
