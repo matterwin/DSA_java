@@ -1,6 +1,6 @@
 package Trees;
 
-public class BinarySeach {
+public class BST {
     Node root;
 
     public class Node{
@@ -15,7 +15,7 @@ public class BinarySeach {
         }
     }
 
-    public BinarySeach(){
+    public BST(){
         root = null;
     }
 
@@ -151,7 +151,7 @@ public class BinarySeach {
     }
 
     public static void main(String[] args){
-        BinarySeach bst = new BinarySeach();
+        BST bst = new BST();
         bst.insert(3);
         bst.insert(1);
         bst.insert(6);

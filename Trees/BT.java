@@ -1,6 +1,6 @@
 package Trees;
 
-public class Binary {
+public class BT {
     Node root;
 
     public class Node{
@@ -15,7 +15,7 @@ public class Binary {
         }
     }
 
-    public Binary(){
+    public BT(){
         root = null;
     }
 
@@ -95,7 +95,7 @@ public class Binary {
     }
 
     public static void main(String[] args){
-        Binary bt = new Binary();
+        BT bt = new BT();
         bt.insert(10);
         bt.insert(12);
         bt.insert(1);

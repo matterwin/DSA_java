@@ -1,4 +1,4 @@
-package Sorting;
+package Sort;
 
 public interface Bubble {
 

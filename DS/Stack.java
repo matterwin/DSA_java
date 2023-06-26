@@ -1,4 +1,4 @@
-package LinkedList;
+package DS;
 
 public class Stack {
     private Node top;
