@@ -11,6 +11,11 @@ public class PriorityQueueBuiltIn {
         queue.offer(3);
         queue.offer(2);
 
+        // Using add()
+        queue.add(1);
+        queue.add(3);
+        queue.add(2);
+
         // Dequeue elements
         int firstElement = queue.poll();
         System.out.println(firstElement); // Output: 1
