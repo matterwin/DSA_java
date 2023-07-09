@@ -27,6 +27,12 @@ public class MapBuiltIn {
         // Remove a key-value pair from the HashMap
         hashMap.remove("orange");
 
+        int appleFrequency = hashMap.getOrDefault("apple", 0);
+        System.out.println("Apple frequency: " + appleFrequency); // Output: 5
+
+        int kiwiFrequency = hashMap.getOrDefault("kiwi", 0);
+        System.out.println("Kiwi frequency: " + kiwiFrequency); // Output: 0
+
         // Iterate over the key-value pairs in the HashMap
         for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
             String fruit = entry.getKey();
