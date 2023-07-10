@@ -12,6 +12,9 @@ public class StringBuilderBuiltIn {
         String result = sb.toString(); // Convert StringBuilder to a String
 
         System.out.println(result);   // Output: Hello, there
+
+
+        //Can do StringBuilder(s) to inline making it
     }
 }
 
