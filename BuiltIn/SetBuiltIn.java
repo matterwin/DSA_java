@@ -29,5 +29,8 @@ public class SetBuiltIn {
         for (String fruit : hashSet) {
             System.out.println(fruit);
         }
+
+        //How to clear set but does it in O(n)
+        hashSet.clear();
     }
 }
