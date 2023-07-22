@@ -12,6 +12,10 @@ public class QueueBuiltIn {
         queue.offer(2);
         queue.offer(3);
 
+        // or can do .add() to add to queue
+        queue.add(3);
+        queue.add(2);
+
         // Dequeue elements
         int firstElement = queue.poll();
         System.out.println(firstElement); // Output: 1
