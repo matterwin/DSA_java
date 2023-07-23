@@ -12,6 +12,7 @@ public class StringBuilderBuiltIn {
         String result = sb.toString(); // Convert StringBuilder to a String
 
         System.out.println(result);   // Output: Hello, there
+        System.out.println(sb.reverse()); //can reverse a string easily
 
 
         //Can do StringBuilder(s) to inline making it
