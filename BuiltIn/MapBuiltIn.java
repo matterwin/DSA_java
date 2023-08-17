@@ -25,6 +25,9 @@ public class MapBuiltIn {
         boolean hasBanana = hashMap.containsKey("banana");
         System.out.println("Has banana: " + hasBanana); // Output: Has banana: true
 
+        boolean hasCorrectBannaValue = hashMap.containsValue(2);
+        System.out.println("Banna has value of 2 ? " + hasCorrectBannaValue); // Output: Banna has value of 2 ? true
+
         // Remove a key-value pair from the HashMap
         hashMap.remove("orange");
 
