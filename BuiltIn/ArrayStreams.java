@@ -3,7 +3,7 @@ package BuiltIn;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class ArrayStreamsBuiltIn {
+public class ArrayStreams {
     public static void main(String[] args) {
         // Creating an array of integers
         int[] numbers = {1, 2, 3, 4, 5};

@@ -3,11 +3,12 @@ package BuiltIn;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SetBuiltIn {
+public class Set_ {
 
     public static void main(String[] args) {
         // Create a new HashSet
         Set<String> hashSet = new HashSet<>();
+        // or HashSet<String> hashSet = new HashSet<>();
 
         // Add elements to the HashSet
         hashSet.add("apple");
