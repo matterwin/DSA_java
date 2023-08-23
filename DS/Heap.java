@@ -111,7 +111,7 @@ public class Heap {
         for (int i = getParent(size - 1); i >= 0; i--) {
             floatDown(i);
         }
-}
+    }
 
     public static void main(String[] args){
         Heap heap = new Heap(5);
