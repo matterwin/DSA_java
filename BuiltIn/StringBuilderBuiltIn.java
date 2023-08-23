@@ -1,4 +1,4 @@
-// package BuiltIn;
+package BuiltIn;
 
 public class StringBuilderBuiltIn {
     public static void main(String[] args){
