@@ -43,5 +43,14 @@ public class Map_ {
             int count = entry.getValue();
             System.out.println(fruit + ": " + count);
         }
+
+        // Add key-value pairs to the HashMap using computeIfAbsent
+        hashMap.computeIfAbsent("apple", k -> 5);
+        hashMap.computeIfAbsent("banana", k -> 2);
+        hashMap.computeIfAbsent("orange", k -> 8);
+        hashMap.computeIfAbsent("apple", k -> 0); // Existing keys are not modified
+
+        // In essence, computeIfAbsent encapsulates the process of checking for the key's existence and performing an action (or computation) 
+        //  if the key is absent, all in one method call.
     }
 }
