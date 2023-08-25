@@ -52,5 +52,9 @@ public class Map_ {
 
         // In essence, computeIfAbsent encapsulates the process of checking for the key's existence and performing an action (or computation) 
         //  if the key is absent, all in one method call.
+
+        // now Present
+        // Use computeIfPresent to modify an existing value
+        hashMap.computeIfPresent("banana", (key, value) -> value + 1);
     }
 }
