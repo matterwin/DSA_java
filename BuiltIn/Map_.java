@@ -14,6 +14,9 @@ public class Map_ {
         hashMap.put("banana", 2);
         hashMap.put("orange", 8);
 
+        // keySet() functionality
+        for(String s : hashMap.keySet()) System.out.println("String: " + s);
+
         // Access values by key
         int appleCount = hashMap.get("apple");
         System.out.println("Apple count: " + appleCount); // Output: Apple count: 5
