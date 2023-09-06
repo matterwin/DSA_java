@@ -22,6 +22,11 @@ public class PriorityQueueCustom {
             int element = queue.poll();
             System.out.println(element);
         }
+
+        // Output
+            // 3
+            // 2
+            // 1
     }
     
 }
