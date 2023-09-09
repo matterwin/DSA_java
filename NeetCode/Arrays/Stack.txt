@@ -1,0 +1,5 @@
+// Time complexities
+Operation       Big-O       Notes
+Push            O(1)
+Pop             O(1)        Check if the stack is empty first
+Peek/top        O(1)        Retrieves without removing

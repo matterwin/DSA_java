@@ -1,0 +1,6 @@
+// Time complexities
+Operation       Big-O       Notes
+Access          O(n)        
+Search          O(n)
+Insertion       O(1)        Assuming you have the reference to the node at the desired position
+Deletion        O(1)        Assuming you have the reference to the node at the desired position
