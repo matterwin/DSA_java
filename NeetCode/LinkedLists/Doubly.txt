@@ -1,0 +1,9 @@
+// Time complexities
+Operation       Big-O       Notes
+Access          O(n)        
+Search          O(n)
+Insertion       O(1)        Assuming you have the reference to the node at the desired position
+Deletion        O(1)        Assuming you have the reference to the node at the desired position
+
+So compared to arrays, linked lists are less efficient when accessing a random element due to lack of an in-built index.
+So while arrays will access in O(1) in all cases, linked lists are limited by O(n) unless you are accessing the head node.
